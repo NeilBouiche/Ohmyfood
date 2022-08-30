@@ -1,0 +1,53 @@
+.fonctionnement {
+  margin-top: 3rem;
+}
+
+.step {
+  align-items: center;
+
+  &__box {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    background-color: #f6f6f6;
+    border-radius: 2rem;
+    padding: 2.5rem 6rem 2.5rem 2rem;
+    box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
+
+    &--selected {
+      background-color: #f5edff;
+    }
+  }
+
+  &__bubble {
+    color: white;
+    position: absolute;
+    padding: 0.5rem;
+    background-color: #9356dc;
+    border-radius: 50%;
+    border: solid 1px #d3d3d3;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    left: -1rem;
+    top: 2.1rem;
+  }
+
+  &__icon {
+    color: #7e7e7e;
+    margin-left: 1.5rem;
+
+    &--selected {
+      color: #9356dc;
+    }
+  }
+
+  &__description {
+    font-weight: 600;
+    margin-left: 1.5rem;
+  }
+}
