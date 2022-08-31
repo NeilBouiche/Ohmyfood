@@ -1,8 +1,8 @@
 .restaurant {
   padding-top: 3rem;
+  padding-bottom: 5rem;
   width: 100%;
   background-color: #f6f6f6;
-  margin-bottom: 3rem;
 
   &__title {
     margin-bottom: 1.5rem;
@@ -25,6 +25,10 @@
     background-color: aquamarine;
     color: green;
     font-size: 1.4rem;
+
+    &--bis {
+      bottom: -27rem;
+    }
   }
 
   &__img {

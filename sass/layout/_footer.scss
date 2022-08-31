@@ -1,0 +1,30 @@
+.footer {
+  background-color: #353535;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__box__container {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      color: white;
+      margin-right: 1rem;
+      font-size: 1rem;
+    }
+
+    &__text {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__box__text {
+    @extend .footer__box__container__text;
+  }
+}
