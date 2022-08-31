@@ -169,17 +169,17 @@ a {
   padding-bottom: 1.5rem;
   box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
 }
+.restaurant__box__link {
+  position: relative;
+}
 .restaurant__status {
   position: absolute;
-  bottom: -1rem;
   right: 2em;
+  bottom: 18rem;
   padding: 0.5rem 1rem;
   background-color: aquamarine;
   color: green;
   font-size: 1.4rem;
-}
-.restaurant__status--bis {
-  bottom: -27rem;
 }
 .restaurant__img {
   width: 100%;
