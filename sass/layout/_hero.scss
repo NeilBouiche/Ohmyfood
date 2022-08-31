@@ -43,6 +43,17 @@
     color: rgb(255, 249, 221);
     font-weight: 500;
     -webkit-box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.37);
-    box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.37);
+    transition: all 0.3s;
+
+    &:hover {
+      background: linear-gradient(
+        160deg,
+        lighten(rgba(255, 121, 218, 1), 5%) 0%,
+        lighten(rgba(147, 86, 220, 1), 5%) 81%
+      );
+      -webkit-box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.5);
+    }
   }
 }
