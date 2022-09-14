@@ -63,6 +63,9 @@
       background-color: #ffff;
       border-radius: 1rem;
       box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
+      opacity: 0;
+      animation: reveal 1.4s forwards;
+      animation-iteration-count: 1;
 
       &__title {
         font-size: 1.8rem;
@@ -93,4 +96,15 @@
   align-self: center;
   padding: 1.5rem 5rem;
   margin-bottom: 4rem;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+  }
+}
+@for $i from 1 to 11 {
+  .list__plats__cards:nth-of-type(#{$i}n) {
+    animation-delay: #{$i * 0.1}s;
+  }
 }
