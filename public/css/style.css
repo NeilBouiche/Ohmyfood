@@ -122,8 +122,11 @@ a {
   padding: 2.5rem 6rem 2.5rem 2rem;
   box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
 }
-.step__box--selected {
+.step__box:hover {
   background-color: #f5edff;
+}
+.step__box:hover .step__icon {
+  color: #9356dc;
 }
 .step__bubble {
   color: white;
@@ -143,9 +146,6 @@ a {
 .step__icon {
   color: #7e7e7e;
   margin-left: 1.5rem;
-}
-.step__icon--selected {
-  color: #9356dc;
 }
 .step__description {
   font-weight: 600;
@@ -194,8 +194,26 @@ a {
   justify-content: space-between;
   margin: 0 2rem 0 1rem;
 }
+.restaurant__icon__box {
+  position: relative;
+  right: 24px;
+}
+.restaurant__icon__box:hover .restaurant__icon--full {
+  opacity: 1;
+  transition: all 1s;
+}
 .restaurant__icon {
   font-size: 2.4rem;
+  position: absolute;
+  opacity: 1;
+}
+.restaurant__icon--full {
+  background: linear-gradient(160deg, #ff93e1 0%, #a16be0 81%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 .restaurant__description {
   font-size: 1.6rem;

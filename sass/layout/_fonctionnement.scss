@@ -16,8 +16,12 @@
     padding: 2.5rem 6rem 2.5rem 2rem;
     box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
 
-    &--selected {
+    &:hover {
       background-color: #f5edff;
+    }
+
+    &:hover .step__icon {
+      color: #9356dc;
     }
   }
 
@@ -40,10 +44,6 @@
   &__icon {
     color: #7e7e7e;
     margin-left: 1.5rem;
-
-    &--selected {
-      color: #9356dc;
-    }
   }
 
   &__description {
