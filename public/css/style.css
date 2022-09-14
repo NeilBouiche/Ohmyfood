@@ -48,7 +48,7 @@ a {
   padding: 0 5% 0 5%;
 }
 
-.header {
+.header, .header--menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +84,7 @@ a {
   font-size: 1.4rem;
   color: rgb(151, 151, 151);
 }
-.hero__btn {
+.hero__btn, .menu__btn {
   width: fit-content;
   margin-top: 3rem;
   border-radius: 5rem;
@@ -98,7 +98,7 @@ a {
   box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.37);
   transition: all 0.3s;
 }
-.hero__btn:hover {
+.hero__btn:hover, .menu__btn:hover {
   background: linear-gradient(160deg, #ff93e1 0%, #a16be0 81%);
   -webkit-box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 7px 7px -2px rgba(0, 0, 0, 0.5);
@@ -175,7 +175,7 @@ a {
 .restaurant__status {
   position: absolute;
   right: 2em;
-  bottom: 18rem;
+  bottom: 14rem;
   padding: 0.5rem 1rem;
   background-color: aquamarine;
   color: green;
@@ -291,6 +291,87 @@ a {
   100% {
     transform: translateY(-100%);
   }
+}
+.menu__box {
+  width: 100%;
+  height: 30rem;
+}
+.menu__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header--menu {
+  position: relative;
+}
+.header--menu__arrow {
+  font-size: 2.6rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 1.8rem;
+}
+
+.restaurant__icon__box--menu {
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+
+.list {
+  padding-top: 4rem;
+  background-color: #f6f6f6;
+  border-radius: 5rem;
+  margin-top: -7rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.list__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.list__head__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.list__plats__title__sub {
+  padding-bottom: 0.6rem;
+  border-bottom: solid 3px #99e2d0;
+}
+.list__plats__cards {
+  margin: 2rem 0;
+  padding: 1.3rem;
+  padding-right: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
+}
+.list__plats__cards__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.list__plats__cards__box {
+  display: flex;
+  justify-content: space-between;
+}
+.list__plats__cards__box__description {
+  font-size: 1.4rem;
+}
+.list__plats__cards__box__prix {
+  font-weight: bold;
+}
+.list__plats__cards--last {
+  margin-bottom: 4rem;
+}
+
+.menu__btn {
+  margin: 0;
+  align-self: center;
+  padding: 1.5rem 5rem;
+  margin-bottom: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
