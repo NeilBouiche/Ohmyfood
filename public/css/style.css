@@ -342,32 +342,86 @@ a {
   border-bottom: solid 3px #99e2d0;
 }
 .list__plats__cards {
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 2rem 0;
-  padding: 1.3rem;
-  padding-right: 2rem;
   background-color: white;
   border-radius: 1rem;
+  overflow: hidden;
   box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
   opacity: 0;
   animation: reveal 1.4s forwards;
   animation-iteration-count: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list__plats__cards:hover .list__plats__cards__tickbox {
+  transform: translateX(0rem);
+}
+.list__plats__cards:hover .list__plats__cards__box__prix {
+  transform: translateX(-3rem);
+}
+.list__plats__cards:hover .list__plats__cards__tickbox__icon {
+  transform: rotate(0);
+}
+.list__plats__cards__left {
+  margin: 1.3rem 0 1rem 1.3rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .list__plats__cards__title {
   font-size: 1.8rem;
   font-weight: bold;
+  height: 4rem;
+  margin-right: 4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .list__plats__cards__box {
   display: flex;
+  flex: 100%;
+  flex-direction: row;
   justify-content: space-between;
 }
 .list__plats__cards__box__description {
   font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .list__plats__cards__box__prix {
   font-weight: bold;
+  transition: all 0.5s ease;
 }
 .list__plats__cards--last {
   margin-bottom: 4rem;
+}
+.list__plats__cards__tickbox {
+  margin-left: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #99e2d0;
+  color: #ffffff;
+  text-align: center;
+  width: 6rem;
+  border-radius: 0 1rem 1rem 0;
+  font-size: 2.2rem;
+  transform: translateX(10rem);
+  transition: all 0.5s ease;
+}
+.list__plats__cards__tickbox__icon {
+  transform: rotate(180deg);
+  transition: all 1s ease;
 }
 
 .menu__btn {
