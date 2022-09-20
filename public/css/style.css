@@ -54,6 +54,7 @@ a {
   justify-content: center;
   padding: 1.5rem 0 1rem 0;
   border-bottom: solid 2px lightgrey;
+  background-color: white;
 }
 
 .location {
@@ -221,10 +222,38 @@ a {
   margin-left: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .step {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  .step__box {
+    margin-right: 2rem;
+    justify-content: center;
+  }
+  .step__bubble {
+    top: -15%;
+    left: 45%;
+  }
+  .restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restaurant__title {
+    width: 100%;
+  }
+  .restaurant__box {
+    width: 40%;
+    margin: 2rem;
+  }
+}
 .footer {
   background-color: #353535;
   padding-top: 2rem;
   padding-bottom: 5rem;
+  position: relative;
 }
 .footer__title {
   margin-bottom: 1rem;
@@ -304,6 +333,7 @@ a {
 
 .header--menu {
   position: relative;
+  z-index: 10;
 }
 .header--menu__arrow {
   font-size: 2.6rem;
@@ -354,15 +384,12 @@ a {
   opacity: 0;
   animation: reveal 1.4s forwards;
   animation-iteration-count: 1;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .list__plats__cards:hover .list__plats__cards__tickbox {
   transform: translateX(0rem);
-}
-.list__plats__cards:hover .list__plats__cards__box__prix {
-  transform: translateX(-3rem);
+  margin-left: 2rem;
 }
 .list__plats__cards:hover .list__plats__cards__tickbox__icon {
   transform: rotate(0);
@@ -474,6 +501,24 @@ a {
 
 .list__plats__cards:nth-of-type(10n) {
   animation-delay: 1s;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__box {
+    position: fixed;
+    height: 101vh;
+  }
+  .menu__img {
+    object-fit: cover;
+  }
+  .list {
+    max-width: 80rem;
+    position: relative;
+    top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

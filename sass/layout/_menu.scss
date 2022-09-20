@@ -13,6 +13,7 @@
 .header--menu {
   @extend .header;
   position: relative;
+  z-index: 10;
 
   &__arrow {
     font-size: 2.6rem;
@@ -69,16 +70,12 @@
       opacity: 0;
       animation: reveal 1.4s forwards;
       animation-iteration-count: 1;
-      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
 
       &:hover .list__plats__cards__tickbox {
         transform: translateX(0rem);
-      }
-
-      &:hover .list__plats__cards__box__prix {
-        transform: translateX(-3rem);
+        margin-left: 2rem;
       }
 
       &:hover .list__plats__cards__tickbox__icon {
@@ -166,5 +163,24 @@
 @for $i from 1 to 11 {
   .list__plats__cards:nth-of-type(#{$i}n) {
     animation-delay: #{$i * 0.1}s;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__box {
+    position: fixed;
+    height: 101vh;
+  }
+  .menu__img {
+    object-fit: cover;
+  }
+
+  .list {
+    max-width: 80rem;
+    position: relative;
+    top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30rem;
   }
 }
