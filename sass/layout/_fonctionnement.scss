@@ -3,17 +3,24 @@
 }
 
 .step {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   &__box {
     margin-top: 3rem;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     background-color: #f6f6f6;
     border-radius: 2rem;
     padding: 2.5rem 6rem 2.5rem 2rem;
+    -webkit-box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
     box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
 
     &:hover {
@@ -54,12 +61,19 @@
 
 @media screen and (min-width: 768px) {
   .step {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin-top: 2rem;
 
     &__box {
       margin-right: 2rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
     }
     &__bubble {

@@ -4,6 +4,7 @@
     height: 30rem;
   }
   &__img {
+    -o-object-fit: cover;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -35,11 +36,20 @@
   margin-top: -7rem;
   position: relative;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
   &__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     &__title {
@@ -59,36 +69,59 @@
     }
     &__cards {
       height: 7rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       margin: 2rem 0;
       background-color: #ffff;
       border-radius: 1rem;
       overflow: hidden;
+      -webkit-box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
       box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
       opacity: 0;
+      -webkit-animation: reveal 1.4s forwards;
       animation: reveal 1.4s forwards;
+      -webkit-animation-iteration-count: 1;
       animation-iteration-count: 1;
       overflow: hidden;
+      -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
 
       &:hover .list__plats__cards__tickbox {
+        -webkit-transform: translateX(0rem);
+        -ms-transform: translateX(0rem);
         transform: translateX(0rem);
         margin-left: 2rem;
       }
 
       &:hover .list__plats__cards__tickbox__icon {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
         transform: rotate(0);
       }
 
       &__left {
         margin: 1.3rem 0 1rem 1.3rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
         flex: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         white-space: nowrap;
         overflow: hidden;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
       }
 
@@ -99,23 +132,36 @@
         margin-right: 4rem;
         white-space: nowrap;
         overflow: hidden;
+        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
       }
       &__box {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-flex: 100%;
+        -ms-flex: 100%;
         flex: 100%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
 
         &__description {
           font-size: 1.4rem;
           white-space: nowrap;
           overflow: hidden;
+          -o-text-overflow: ellipsis;
           text-overflow: ellipsis;
         }
 
         &__prix {
           font-weight: bold;
+          -webkit-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
         }
       }
@@ -125,8 +171,14 @@
 
       &__tickbox {
         margin-left: -2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         height: 100%;
         background-color: #99e2d0;
@@ -135,11 +187,19 @@
         width: 6rem;
         border-radius: 0 1rem 1rem 0;
         font-size: 2.2rem;
+        -webkit-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
         transform: translateX(10rem);
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &__icon {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+          -webkit-transition: all 1s ease;
+          -o-transition: all 1s ease;
           transition: all 1s ease;
         }
       }
@@ -150,9 +210,16 @@
 .menu__btn {
   @extend .hero__btn;
   margin: 0;
+  -ms-flex-item-align: center;
   align-self: center;
   padding: 1.5rem 5rem;
   margin-bottom: 4rem;
+}
+
+@-webkit-keyframes reveal {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes reveal {
@@ -162,6 +229,7 @@
 }
 @for $i from 1 to 11 {
   .list__plats__cards:nth-of-type(#{$i}n) {
+    -webkit-animation-delay: #{$i * 0.1}s;
     animation-delay: #{$i * 0.1}s;
   }
 }
@@ -172,6 +240,7 @@
     height: 101vh;
   }
   .menu__img {
+    -o-object-fit: cover;
     object-fit: cover;
   }
 

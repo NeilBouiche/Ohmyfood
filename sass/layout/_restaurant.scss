@@ -14,6 +14,7 @@
     border-radius: 1.5rem;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
+    -webkit-box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
     box-shadow: 5px 5px 10px #e5e5e5, -5px -5px 10px #ffffff;
 
     &__link {
@@ -33,6 +34,7 @@
 
   &__img {
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     height: 17rem;
     margin-bottom: 1rem;
@@ -40,8 +42,14 @@
   }
 
   &__text__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 2rem 0 1rem;
   }
@@ -52,6 +60,8 @@
 
     &:hover .restaurant__icon--full {
       opacity: 1;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
       transition: all 1s;
     }
   }
@@ -62,6 +72,11 @@
     opacity: 1;
 
     &--full {
+      background: -o-linear-gradient(
+        290deg,
+        lighten(rgba(255, 121, 218, 1), 5%) 0%,
+        lighten(rgba(147, 86, 220, 1), 5%) 81%
+      );
       background: linear-gradient(
         160deg,
         lighten(rgba(255, 121, 218, 1), 5%) 0%,
@@ -84,8 +99,13 @@
 
 @media screen and (min-width: 768px) {
   .restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     &__title {
